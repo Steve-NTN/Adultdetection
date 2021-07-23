@@ -1,0 +1,38 @@
+.div-file-input{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.div-file-input input{
+  text-align: center;
+}
+
+.div-button{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#click_predict{
+  background-color: #101010;
+  color: white;
+  height: 50px;
+  width: 100px;
+}
+
+#click_back{
+  background-color: #101010;
+  color: white;
+  height: 50px;
+  width: 150px;
+}
+
+.center-text{
+  text-align: center;
+}
+
+label{
+  font-size: 30px;
+}

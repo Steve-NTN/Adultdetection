@@ -1,0 +1,22 @@
+{% extends 'index.html'%}
+{% block title %}
+Predict
+{% endblock %}
+
+{% block topic %}
+Predict
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <img src="">
+    <h1 style="text-align: center;">Predict result:</h1>
+    <h3 style="text-align: center;">Label {{ class_index_name['index'] }}: {{ class_index_name['name'] }}</h3>
+</div>
+<div class="container-fluid div-button">
+    <button class="btn" id="click_back">
+        <i class="fa fa-arrow-left"></i>
+        Back to home
+    </button>
+</div>
+{% endblock%}

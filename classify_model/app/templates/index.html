@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.ico') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">Image Detection</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="../">Home</a></li>
+              <li><a href="about">About</a></li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+        
+    {% block content %}
+    <br>
+    <div>
+        <form method="post" enctype="multipart/form-data" id="myform" onchange=loadFile(event)>
+            <div class="row">
+                <div class='center-text'>
+                    <label>Photo</label>
+                    <img src="" id="img" style="width: 100%;">
+                </div>     
+                
+            </div>
+            <div class="row">
+              <div class="center-text">
+                    <label>Input</label>
+                    <div class="div-file-input">
+                        <input type="file" id="image" name="image"/>
+                    </div>
+                </div> 
+            </div>
+            <div class="container-fluid div-button">
+                <button type="submit" class="btn" id="click_predict">Predict</button>
+            </div>
+        </form>
+    </div>
+    {% endblock %}
+    
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/event.js') }}"></script>
+
+</html>
